@@ -7,8 +7,27 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
+    <string name="action_add">Agregar</string>
+
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Productos</string>
     <string name="menu_slideshow">Sucursales</string>
     <string name="menu_servicios">Servicios</string>
+
+    <!-- Productos -->
+    <string name="nameP1">Cell</string>
+    <string name="descriptionP1">personaje malo</string>
+    <string name="precioP1">$50\'000.000</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="txt_codigo">Código del producto</string>
+    <string name="txt_descripcion">Descripción del producto</string>
+    <string name="txt_precio">Precio del producto</string>
+    <string name="BotonRegistrar">Registrar Producto</string>
+    <string name="BotonBuscar">Buscar Producto</string>
+    <string name="BotonEliminar">Eliminar Producto</string>
+    <string name="BotonModificar">Modificar Producto</string>
+
 </resources>

@@ -1,12 +1,9 @@
 package com.example.belleza;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
-import android.widget.Toast;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -16,52 +13,43 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
-import java.util.Timer;
-import java.util.TimerTask;
+import com.example.belleza.databinding.ActivityMainBinding;
 
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-
+    private ActivityMainBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
 
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        setSupportActionBar(binding.appBarMain.toolbar);
+        binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "En implementacion", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
+        DrawerLayout drawer = binding.drawerLayout;
+        NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.nav_servicios)
-                .setDrawerLayout(drawer)
+                R.id.nav_home, R.id.nav_productos, R.id.nav_servicios, R.id.nav_sucursales)
+                .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-        TimerTask tarea = new TimerTask() {
-            @Override
-            public void run() {
-                Intent intent = new Intent(MainActivity.this, principal.class);
-                startActivity(intent);
-                finish();
-            }
-        };
-        Timer tiempo = new Timer();
-       
+
+
+
     }
 
     @Override
@@ -78,17 +66,5 @@ public class MainActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 
-    public void Seleccion (View view){
-        switch (view.getId()){
-            case R.id.sombras:
-                Toast.makeText(this, "se agrego el produto", Toast.LENGTH_LONG).show();
-                break;
-            case R.id.crema:
-                Toast.makeText(this, "se agrego el produto", Toast.LENGTH_LONG).show();
-                break;
-            case R.id.lapiz_labial:
-                Toast.makeText(this, "se agrego el produto", Toast.LENGTH_LONG).show();
-                break;
-        }
-}
+
 }
