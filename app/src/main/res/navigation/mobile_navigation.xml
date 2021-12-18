@@ -27,4 +27,12 @@
         android:name="com.example.belleza.ui.servicios.ServiciosFragment"
         android:label="@string/menu_servicios"
         tools:layout="@layout/fragment_servicios" />
+
+    <activity
+        android:id="@+id/id_mapaO"
+        android:name="com.example.belleza.MainActivity2"
+        android:label="mapa"
+        tools:layout="@layout/activity_main2"/>
+
+
 </navigation>

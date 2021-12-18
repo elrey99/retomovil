@@ -1,11 +1,14 @@
 package com.example.belleza.modelos;
 
+import com.google.android.gms.maps.model.LatLng;
+
 public class Sucursal {
     private int id;
     private String name;
     private String description;
     private String location;
     private byte[] image;
+
 
     public Sucursal(int id, String name, String description, String location, byte[] image) {
         this.id = id;

@@ -45,6 +45,7 @@ public class FormActivity extends AppCompatActivity {
     String campo3Insert;
     byte[] imageInsert;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

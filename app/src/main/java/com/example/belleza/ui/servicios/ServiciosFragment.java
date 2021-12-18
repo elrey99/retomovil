@@ -55,7 +55,7 @@ public class ServiciosFragment extends Fragment {
         switch (item.getItemId()){
             case R.id.action_add:
                 Intent intent = new Intent(getContext(), FormActivity.class);
-                intent.putExtra("name","SERVICIOS");
+                intent.putExtra("name","PRODUCTOS");
                 getActivity().startActivity(intent);
                 //Toast.makeText(getContext(), "Hola Servicios", Toast.LENGTH_SHORT).show();
                 return true;

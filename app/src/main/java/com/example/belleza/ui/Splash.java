@@ -10,6 +10,8 @@ import android.widget.ProgressBar;
 import com.example.belleza.MainActivity;
 import com.example.belleza.R;
 
+
+
 public class Splash extends AppCompatActivity {
     private int time = 5000;
     private ProgressBar progressBar, progressBar2;
@@ -18,8 +20,10 @@ public class Splash extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        progressBar2 = (ProgressBar) findViewById(R.id.progressBar2);
+        progressBar2 = (ProgressBar) findViewById(R.id.progressBar);
         Runnable runnable = new Runnable() {
+
+
             @Override
             public void run() {
                 progressBar2.incrementProgressBy(20);

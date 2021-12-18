@@ -22,5 +22,6 @@
             android:id="@+id/nav_sucursales"
             android:icon="@drawable/baseline_business_black_48"
             android:title="@string/menu_slideshow" />
+
     </group>
 </menu>
