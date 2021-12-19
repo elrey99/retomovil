@@ -13,6 +13,7 @@
     <string name="menu_gallery">Productos</string>
     <string name="menu_slideshow">Sucursales</string>
     <string name="menu_servicios">Servicios</string>
+    <string name="mapa">mapa</string>
 
     <!-- Productos -->
     <string name="nameP1">Cell</string>
@@ -29,5 +30,7 @@
     <string name="BotonBuscar">Buscar Producto</string>
     <string name="BotonEliminar">Eliminar Producto</string>
     <string name="BotonModificar">Modificar Producto</string>
+    <string name="title_activity_form_maps">FormMapsActivity</string>
+    <string name="title_activity_show_maps">ShowMapsActivity</string>
 
 </resources>

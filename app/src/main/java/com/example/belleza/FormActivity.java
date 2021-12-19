@@ -1,10 +1,5 @@
 package com.example.belleza;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -19,9 +14,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import com.example.belleza.datos.DBHelper;
 import com.google.android.material.snackbar.Snackbar;
@@ -29,7 +28,6 @@ import com.google.android.material.snackbar.Snackbar;
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
-import java.util.ArrayList;
 
 public class FormActivity extends AppCompatActivity {
     private final int REQUEST_CODE_GALLERY = 999;
@@ -44,7 +42,6 @@ public class FormActivity extends AppCompatActivity {
     String campo2Insert;
     String campo3Insert;
     byte[] imageInsert;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -10,10 +10,10 @@ import android.database.sqlite.SQLiteStatement;
 import androidx.annotation.Nullable;
 
 public class DBHelper extends SQLiteOpenHelper {
-    private SQLiteDatabase sqLiteDatabase ;
+    private SQLiteDatabase sqLiteDatabase;
 
     public DBHelper(Context context) {
-        super(context, "belleza.db", null, 1);
+        super(context, "dbbelleza", null, 1);
         sqLiteDatabase = this.getWritableDatabase();
     }
 
@@ -85,6 +85,5 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues.put("image", image);
         sqLiteDatabase.update(table,contentValues,"id = ?",new String[]{id});
     }
-
 
 }

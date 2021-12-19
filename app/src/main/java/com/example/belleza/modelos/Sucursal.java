@@ -18,6 +18,11 @@ public class Sucursal {
         this.image = image;
     }
 
+    public Sucursal(String name, String location) {
+        this.name = name;
+        this.location = location;
+    }
+
     public Sucursal() {}
 
     public int getId() {
@@ -58,6 +63,14 @@ public class Sucursal {
 
     public void setImage(byte[] image) {
         this.image = image;
+    }
+
+    public LatLng locationToCoord(){
+        String[] coord = this.location.split(",");
+        Double latitud = Double.parseDouble(coord[0]);
+        Double longitud = Double.parseDouble(coord[1]);
+        LatLng latLng = new LatLng(latitud,longitud);
+        return latLng;
     }
 }
 
